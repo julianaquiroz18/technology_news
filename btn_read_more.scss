@@ -1,0 +1,35 @@
+.status {
+    display: none;
+}
+
+.content_hidden {
+    opacity: 0;
+    font-size: 0;
+    display: none;
+    transition: .5s ease;
+}
+
+.status:checked~p .content_hidden {
+    opacity: 1;
+    display: inline-block;
+    font-size: inherit;
+}
+
+.trigger:before {
+    content: "Read more";
+}
+
+.status:checked~.trigger:before {
+    content: "Read less"
+}
+
+.trigger {
+    cursor: pointer;
+    color: black;
+    font-size: .9em;
+    padding: 0 .5em;
+    margin: 0 .5em;
+    border: 1px solid black;
+    border-radius: .25em;
+    align-self: flex-end;
+}
