@@ -1,5 +1,5 @@
 :root {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 * {
@@ -17,7 +17,7 @@
     color: black;
     background-color: white;
     min-height: 10vh;
-    font-size: 1rem;
+    font-size: 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ img {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 0.85rem;
     padding: 0.5em;
 }
 
@@ -106,5 +106,43 @@ h2 {
     }
     p {
         font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .news_section {
+        flex-direction: column;
+        flex-basis: 60%;
+        margin-top: 0;
+        & img {
+            min-height: 55vh;
+            max-height: 55vh;
+            width: 100%;
+        }
+    }
+    .navigation {
+        flex-basis: 10%;
+    }
+    .aside {
+        flex-basis: 25%;
+        & a {
+            font-size: 1.5rem;
+        }
+        & img {
+            width: 100%;
+        }
     }
 }
